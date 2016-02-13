@@ -44,9 +44,11 @@ curl https://golang.org/x/net?go-get=1
  1. 将HOST的```GOROOT```，```GOPATH```引入到docker容器
  1. 本机go get加上```--insecure```
         ```alias goget='go get -v -u --insecure'```
+
 #### *为什么使用docker*
  - 需要占用80端口
  - 需要将golang.org指向本机
+
 #### *为什么不用https*
  - 由于在docker中是本机，没必要自签名证书再加入受信
 
