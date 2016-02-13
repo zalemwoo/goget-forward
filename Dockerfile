@@ -8,8 +8,13 @@ ENV GOPATH /gopath
 
 ENV PATH $GOROOT/bin:$PATH
 
-RUN alias goget='go get -v --insecure'
+RUN mkdir -p /go
+ADD out/goget-forward /go
 
-ENTRYPOINT [ "go", "get", "-v", "--insecure" ]
+RUN echo "alias goget=\"go get -v -u --insecure\"" > /etc/profile.d/goget.sh
+
+ENTRYPOINT [ "/go/goget-forward" ]
 
 VOLUME /goroot /gopath
+
+EXPORT 80

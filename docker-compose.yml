@@ -1,0 +1,11 @@
+goget_forward:
+    container_name: goget
+    build: .
+    restart: always
+    environment:
+        GOROOT: /goroot
+        GOPATH: /gopath
+    volumes:
+        - $GOROOT:/goroot:ro
+        - $GOPATH:/gopath
+    hostname: golang.org

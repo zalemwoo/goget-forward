@@ -91,7 +91,7 @@ Nothing to see here; <a href="https://godoc.org/golang.org{{.Prefix}}{{.Head}}{{
 </html>
 `))
 
-func main() {
+func startServer() error {
 	server := &http.Server{
 		Addr:           ":80",
 		Handler:        http.DefaultServeMux,
@@ -99,5 +99,9 @@ func main() {
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	log.Fatal(server.ListenAndServe())
+	return server.ListenAndServe()
+}
+
+func main() {
+	log.Fatal(startServer())
 }

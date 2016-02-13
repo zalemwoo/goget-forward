@@ -1,9 +1,0 @@
-FROM alpine:3.2
-MAINTAINER zalemwoo "zalemwoo@gmail.com"
-
-RUN mkdir -p /go
-ADD out/go-get-forward /go
-
-ENTRYPOINT [ "/go/go-get-forward" ]
-
-EXPOSE 80
