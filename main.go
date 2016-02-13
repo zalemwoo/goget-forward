@@ -93,7 +93,7 @@ Nothing to see here; <a href="https://godoc.org/golang.org{{.Prefix}}{{.Head}}{{
 
 func main() {
 	server := &http.Server{
-		Addr:           ":8080",
+		Addr:           ":80",
 		Handler:        http.DefaultServeMux,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,

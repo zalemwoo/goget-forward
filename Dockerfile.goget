@@ -1,0 +1,15 @@
+FROM ubuntu:14.04
+MAINTAINER zalemwoo "zalemwoo@gmail.com"
+
+RUN apt-get install git -y
+
+ENV GOROOT /goroot
+ENV GOPATH /gopath
+
+ENV PATH $GOROOT/bin:$PATH
+
+RUN alias goget='go get -v --insecure'
+
+ENTRYPOINT [ "go", "get", "-v", "--insecure" ]
+
+VOLUME /goroot /gopath
