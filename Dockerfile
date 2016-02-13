@@ -17,4 +17,4 @@ ENTRYPOINT [ "/go/goget-forward" ]
 
 VOLUME /goroot /gopath
 
-EXPORT 80
+EXPOSE 80
