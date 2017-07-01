@@ -35,7 +35,6 @@ curl https://golang.org/x/net?go-get=1
 ```html
 <meta name="go-import" content="golang.org/x/net git https://go.googlesource.com/net">
 ```
-很华丽地被墙了（其实```https://golang.org/```已经被墙了，科学了一下）
 
 ### 实现
 #### **步骤**
